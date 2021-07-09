@@ -10,12 +10,22 @@ body
    background-position: top center;
 }
 
+.strong-colored {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.page-inner-img {
+   height: 226px;
+   width: auto;
+}
+
 blockquote
 {
-   border: solid 1px #332C28;
+   border: solid 1px #483d38;
    margin: 10px;
    padding: 10px;
-   background-color: #332C28;
+   background-color: #483d38;
    margin-left: 50px;
    padding-left: 47px;
    background-image: url('images/postquote.png');
@@ -555,3 +565,45 @@ ul.art-hmenu>li:first-child:before{
    border: 3px solid black;
    margin: 10px 10px 10px 10px;
 }
+
+/* begin PostBullets */
+.art-listcontent ol, .art-listcontent ul
+{
+   margin: 1em 0 1em 2em;
+   padding: 0;
+}
+
+.art-listcontent li
+{
+   font-size: 12px;
+   color: #DDD7D4;
+   margin: 5px 0 0 -15px;
+   padding: 0 0 0 16px;
+}
+
+.art-listcontent li ol, .art-post li ul
+{
+   margin: 0.5em 0 0.5em 2em;
+   padding: 0;
+}
+
+.art-listcontent ol>li
+{
+   background: none;
+   padding-left: 0;
+   /* overrides overflow for "ul li" and sets the default value */
+  overflow: visible;
+}
+
+.art-listcontent ul>li
+{
+   background-image: url('images/postbullets.png');
+   background-repeat: no-repeat;
+   background-position: top left;
+   padding-left: 16px;
+   /* makes "ul li" not to align behind the image if they are in the same line */
+  overflow-x: visible;
+   overflow-y: hidden;
+}
+
+/* end PostBullets */

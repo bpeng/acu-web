@@ -6,7 +6,8 @@ include 'src/Steampixel/Route.php';
 
 // Define a global basepath
 define('BASEPATH','/');
-define ("ALL_PATH", array ("acupuncture","home","white"));
+define ("ALL_PATH", array ("acupuncture","home","moxibustion", "acupressure-2", "cupping", "reiki-2", "ear-candles", "indications",
+                           "history-of-acupuncture", "precautions", "about-us", "testimonials"));
 
 function checkPath($path) {
     //$ALL_PATH = array("acupuncture","home","white");
@@ -15,10 +16,10 @@ function checkPath($path) {
 
 Route::add('/([a-z-0-9-]*)', function($path) {
   if ($path == ""){//home page
-      $path = 'acupuncture';
+      $path = 'home';
   }
   if(checkPath($path) == TRUE) {
-     include('home.php');
+     include('template.php');
   } else {//invalid path
     header('HTTP/1.0 404 Not Found');
     echo 'Error 404 :-(<br>';
